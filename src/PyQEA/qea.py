@@ -9,7 +9,7 @@ class QuantumEvAlgorithm:
     URL. FWG"""
 
     def __init__(self, f, n_dims, upper_bound, lower_bound, integral_id, sigma_scaler=1.00001, mu_scaler=100, elitist_level=4,
-    error_ev = 1 ,ros_flag = False, saving_interval = 500, restrictions = []):
+    ros_flag = False, saving_interval = 500, restrictions = []):
         """The QuantumEvAlgorithm class admits a (scalar) function to be optimized. The function
         must be able to generate multiple outputs for multiple inputs of shape (n_samples,n_dimensions).
         The n_dims attribute is to be placed as an input of the class"""
@@ -19,7 +19,6 @@ class QuantumEvAlgorithm:
         self.mu_scaler = mu_scaler
         self.elitist_level = elitist_level
         self.ros_flag = ros_flag
-        self.error = error_ev
         self.saving_interval = saving_interval
         self.upper = upper_bound
         self.lower = lower_bound
