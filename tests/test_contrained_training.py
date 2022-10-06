@@ -12,13 +12,13 @@ def h(x: np.ndarray):
 
     n_dims = x.shape[1]
 
-    return  -x[:,1 ] - x[:,0] + 6
+    return  -x[:,1 ] - x[:,0] + 6.1
 
 n_dims = 10
 up = 5*np.ones(n_dims)
 low = -5*np.ones(n_dims)
 integrals = np.full(n_dims, False)
-
+integrals[0:2] = True
 
 optimizer = PyQEA.QuantumEvAlgorithm(PyQEA.f, n_dims=n_dims, upper_bound=up,
                                      lower_bound=low, integral_id=integrals,
@@ -28,7 +28,7 @@ optimizer = PyQEA.QuantumEvAlgorithm(PyQEA.f, n_dims=n_dims, upper_bound=up,
 
 results = optimizer.training(N_iterations=4000, sample_size=20, save=False,
                              filename='q11.npz')
-
+print(results['min'])
 def test_integral_training():
 
     assert float(results['cost']) <= 2

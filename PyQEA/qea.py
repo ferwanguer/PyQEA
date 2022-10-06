@@ -186,6 +186,9 @@ of the problem. n_dims = {self.n_dims} vs lower bound =\
                 samples = self.restricted_quantum_sampling(Q, sample_size)
             else:
                 samples = self.quantum_sampling(Q, sample_size)
+                
+            if i > N_iterations - 1:
+                self.elitist_level = 1
 
             best_performer = self.elitist_sample_evaluation(samples)
 
