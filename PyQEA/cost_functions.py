@@ -6,7 +6,8 @@ import numpy as np
 # x = np.zeros(4)
 
 def f(x: np.ndarray):
-    """n-dimensional paraboloid definition. For the first test of the optimization algorithm."""
+    """n-dimensional paraboloid definition. For the first test of the
+       optimization algorithm."""
     if x.ndim == 1:
         x = x[None]
 
@@ -27,7 +28,8 @@ def mse(x: np.ndarray):
 
 
 def g(x: np.ndarray):
-    """n-dimensional Ackley function definition. For the second test of the optimization algorithm. """
+    """n-dimensional Ackley function definition. For the second test of the
+       optimization algorithm. """
     if x.ndim == 1:
         x = x[None]
 
@@ -133,6 +135,3 @@ def equation(x):
         x = x[None]
 
     return np.sum(np.square((np.matmul(A, x.T) - b)))
-
-# solution = np.linalg.solve(A,b)
-# print(solution)
