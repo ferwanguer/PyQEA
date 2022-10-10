@@ -50,7 +50,7 @@ import PyQEA
 
 n_dims = 10 # Input dimensions of f(x)
 up = 5.12 *np.ones(n_dims) # Upper bound defined for the input variables
-low = -5.12*np.ones(n_dims)  # Lower bound defined for the input variables
+low = -5*np.ones(n_dims)  # Lower bound defined for the input variables
 
 integrals = np.full(n_dims, False) #Boolean vector defining which variables are integral
 
