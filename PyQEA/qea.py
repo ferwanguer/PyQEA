@@ -161,7 +161,7 @@ of the problem. n_dims = {self.n_dims} vs lower bound =\
         sys.stdout.flush()
 
     def training(self, N_iterations=100000, sample_size=5,
-                 save=False, filename='testing_evl.npz'):
+                 save=False, results_path = '', filename='testing_evl.npz'):
 
         assert (sample_size > self.elitist_level), "Sample size\
         must be greater than elitist level"
@@ -226,7 +226,7 @@ of the problem. n_dims = {self.n_dims} vs lower bound =\
         }
 
         print(f' \n \n Elapsed time = {end - beginning} seconds')
-        results_path = 'Results'
+        
         if save:
             print(' Saving results')
             np.savez(os.path.join(results_path, filename),
