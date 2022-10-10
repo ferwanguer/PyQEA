@@ -1,8 +1,9 @@
 import numpy as np
-
+import sys
 # sys.path.append('c:\\Users\\fwanguem\\Desktop\\PyQEA_package')
 
-from PyQEA import QuantumEvAlgorithm, f
+from PyQEA import QuantumEvAlgorithm
+from PyQEA.utils.cost_functions import f
 
 def h(x: np.ndarray):
     """Definition of the restriction to be applied to the opt problem"""
