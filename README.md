@@ -35,5 +35,32 @@ or:
 $ cd PyQEA
 $ pip install .
 ```
+### Basic Usage: 
+PyQEA provides a high level implementation of  the proposed Quantum Inspired algorithm that allows a fast implementation and usage.
+It aims to be user-friendly despite the non-trivial nature of its hyper-parameters. We now show the optimization process of a paraboloid (Sphere function)
+of input dimension `n` centered in the vector: `[3.8, 3.8, 3.8, 3.8, ...]`. 
 
+### Use case example: 
 
+The optimizer setup is as follows:
+```python
+import numpy as np
+
+import PyQEA
+
+n_dims = 10 # Input dimensions of f(x)
+up = 5.12 *np.ones(n_dims) # Upper bound defined for the input variables
+low = -5*np.ones(n_dims)  # Lower bound defined for the input variables
+
+integrals = np.full(n_dims, False) #Boolean vector defining which variables are integral
+
+cost_function = PyQEA.f
+
+optimizer = PyQEA.QuantumEvAlgorithm(cost_function, n_dims=n_dims, upper_bound=up,
+                                     lower_bound=low, integral_id=integrals,
+                                     sigma_scaler=1.003,
+                                     mu_scaler=20, elitist_level=6,
+                                     restrictions=[])
+
+results = optimizer.training(N_iterations=4000, sample_size=20)
+```
