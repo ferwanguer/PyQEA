@@ -1,2 +1,2 @@
 from PyQEA.qea import QuantumEvAlgorithm
-from PyQEA.cost_functions import *
+from PyQEA.utils.cost_functions import *
