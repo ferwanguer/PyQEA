@@ -46,7 +46,8 @@ The optimizer setup is as follows:
 ```python
 import numpy as np
 
-import PyQEA
+from PyQEA import QuantumEvAlgorithm
+from PyQEA.utils.cost_functions import f
 
 n_dims = 10 # Input dimensions of f(x)
 up = 5.12 *np.ones(n_dims) # Upper bound defined for the input variables
@@ -54,9 +55,9 @@ low = -5*np.ones(n_dims)  # Lower bound defined for the input variables
 
 integrals = np.full(n_dims, False) #Boolean vector defining which variables are integral
 
-cost_function = PyQEA.f
+cost_function = f
 
-optimizer = PyQEA.QuantumEvAlgorithm(cost_function, n_dims=n_dims, upper_bound=up,
+optimizer = QuantumEvAlgorithm(cost_function, n_dims=n_dims, upper_bound=up,
                                      lower_bound=low, integral_id=integrals,
                                      sigma_scaler=1.003,
                                      mu_scaler=20, elitist_level=6,
