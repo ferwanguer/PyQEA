@@ -18,8 +18,7 @@ optimizer = QuantumEvAlgorithm(f, n_dims=n_dims, upper_bound=up,
                                      mu_scaler=20, elitist_level=6,
                                      restrictions=[])
 
-results = optimizer.training(N_iterations=4000, sample_size=20, save=True,
-                             results_path=os.getcwd(), filename='q11.npz')
+results = optimizer.training(N_iterations=4000, sample_size=20, save=False)
 
 
 def test_integral_training():
