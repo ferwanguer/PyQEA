@@ -65,3 +65,10 @@ optimizer = QuantumEvAlgorithm(cost_function, n_dims=n_dims, upper_bound=up,
 
 results = optimizer.training(N_iterations=4000, sample_size=20)
 ```
+### Parameter tuning
+The main limitation that the user may encounter in the use of this optimizer is
+the non-trivial character of it's hyper-parameters. For that reason, the 
+recommended rule of thumb is the following: 
+
+* `mu_scaler ~ 20` (It is not critical for performance)
+* `sigma_scaler ~ 1 + 1/n` being `n` the number of input dimensions of the problem
