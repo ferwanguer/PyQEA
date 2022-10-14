@@ -67,8 +67,18 @@ results = optimizer.training(N_iterations=4000, sample_size=20)
 ```
 ### Parameter tuning
 The main limitation that the user may encounter in the use of this optimizer is
-the non-trivial character of it's hyper-parameters. For that reason, the 
-recommended rule of thumb is the following: 
+the non-trivial character of it's hyper-parameters. The critical hyper-parameters
+are the ones that regulate the update of hyper-normal distribution after the evaluation
+of the sampled population. This is:
 
-* `mu_scaler ~ 20` (It is not critical for performance)
-* `sigma_scaler ~ 1 + 1/n` being `n` the number of input dimensions of the problem
+
+more information about the nature of this parameters, it's justification and experimental
+results is to be released in the future.
+
+The recommended rule of thumb is the following: 
+
+* `mu_scaler ~ 20` (It is not as critical for performance)
+* `sigma_scaler ~ (1 + 1/(10*n))` being `n` the number of input dimensions of the problem
+
+The key concept to bear in mind is that, as the dimensionality of the problem increases, it is necessary to make the algorithm more "cautious", therefore minimizing the difference between before and after distributions. In practical terms, as the complexity of a given
+problem increases, sigma_scaler must tend to ~1.
