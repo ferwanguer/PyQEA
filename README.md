@@ -71,6 +71,7 @@ the non-trivial character of it's hyper-parameters. The critical hyper-parameter
 are the ones that regulate the update of hyper-normal distribution after the evaluation
 of the sampled population. This is:
 
+![tempsnip](https://user-images.githubusercontent.com/57362874/195801476-4f99a3cc-3063-4c20-b8fa-3eef63483fa6.png)
 
 more information about the nature of this parameters, it's justification and experimental
 results is to be released in the future.
