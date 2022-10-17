@@ -5,7 +5,7 @@ with open("README.md", 'r') as f:
 
 setup(
     name='PyQEA',
-    version='0.1.4',
+    version='0.1.5',
     description="General use optimizer for non-convex cost\
                 functions with non-linear constraints",
     author='Fernando Wanguemert',
