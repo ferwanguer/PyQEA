@@ -1,5 +1,5 @@
 # PyQEA
-> Research toolkit for Quantum Inspired optimization in python
+> Library for Quantum Inspired optimization in python
 
 
 PyQEA is an extensive research library for Quantum inspired hyper-normal based
