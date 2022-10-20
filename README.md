@@ -19,7 +19,7 @@ constraints or the complexity of the cost function. The library has the followin
 To install PyQEA, run this command in your terminal (Currently in test PyPI):
 
 ```shell
-$ pip install -i https://test.pypi.org/simple/ PyQEA==0.1.4
+$ pip install -i https://test.pypi.org/simple/ PyQEA==0.1.5
 ```
 
 To install the development version as it is, clone the development branch of the repo and then run:
