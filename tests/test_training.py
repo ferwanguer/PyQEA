@@ -6,7 +6,7 @@ import numpy as np
 from PyQEA import QuantumEvAlgorithm
 from PyQEA.utils.cost_functions import f,g, rastrigin
 
-n_dims = 2
+n_dims = 10
 up = 5*np.ones(n_dims)
 low = -5*np.ones(n_dims)
 integrals = np.full(n_dims, False)
@@ -17,7 +17,7 @@ optimizer = QuantumEvAlgorithm(g, n_dims=n_dims, upper_bound=up,
                                      mu_scaler=10, elitist_level=10,
                                      restrictions=[])
 
-results = optimizer.training(N_iterations=1500, sample_size=20, save=False,
+results = optimizer.training(N_iterations=1000, sample_size=20, save=False,
                              filename='q11.npz')
 
 

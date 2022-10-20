@@ -65,6 +65,7 @@ optimizer = QuantumEvAlgorithm(cost_function, n_dims=n_dims, upper_bound=up,
 
 results = optimizer.training(N_iterations=4000, sample_size=20)
 ```
+The following example showcases the usage of the optimizer for a constrained-optimization problem
 ```python
 
 from PyQEA import QuantumEvAlgorithm
