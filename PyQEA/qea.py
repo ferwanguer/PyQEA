@@ -91,7 +91,7 @@ of the problem. n_dims = {self.n_dims} vs lower bound =\
         valid = np.full(n_samples, True)
 
         for h in self.restrictions:
-            valid = valid * h(samples) > 0
+            valid = valid * h(samples) >= 0
         samples = samples[valid, :]
 
         while (n_samples-samples.shape[0] > 0):
