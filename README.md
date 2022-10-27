@@ -1,3 +1,4 @@
+
 # PyQEA
 > Library for Quantum Inspired optimization in python
 
@@ -8,7 +9,12 @@ optimization in python.
 It is intended for the solution of global optimization problems where conventional 
 genetic algorithms or PSO yield sub-optimal results. The current implementation of 
 the algorithm allows for a fast deployment of any optimization problem, regardless of the non-linearity of its 
-constraints or the complexity of the cost function. The library has the following features:
+constraints or the complexity of the cost function.
+
+### Other implementations
+* Currently being developed in [Go](https://go.dev/) programming language by [p-saucedo](https://github.com/p-saucedo) [here](https://github.com/p-saucedo/GoQEA)
+
+The library has the following features:
 
 ## Features
 * High level module for Quantum Inspired optimization
@@ -35,8 +41,7 @@ or:
 $ cd PyQEA
 $ pip install .
 ```
-### Other implementations
-* Currently being developed in [Go](https://go.dev/) programming language by [p-saucedo](https://github.com/p-saucedo) [here](https://github.com/p-saucedo/GoQEA)
+
 ### Basic Usage: 
 PyQEA provides a high level implementation of  the proposed Quantum Inspired algorithm that allows a fast implementation and usage.
 It aims to be user-friendly despite the non-trivial nature of its hyper-parameters. We now show the optimization process of a paraboloid (Sphere function)
