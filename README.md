@@ -121,3 +121,5 @@ The recommended rule of thumb is the following:
 
 The key concept to bear in mind is that, as the dimensionality of the problem increases, it is necessary to make the algorithm more "cautious", therefore minimizing the difference between before and after distributions. In practical terms, as the complexity of a given
 problem increases, sigma_scaler must tend to ~1.
+
+Pending to be uploaded to PyPI
