@@ -6,7 +6,7 @@ import numpy as np
 from PyQEA import QuantumEvAlgorithm
 from PyQEA.utils.cost_functions import f,g, rastrigin
 
-n_dims = 10000
+n_dims = 10
 up = 5*np.ones(n_dims)
 low = -5*np.ones(n_dims)
 integrals = np.full(n_dims, False)
